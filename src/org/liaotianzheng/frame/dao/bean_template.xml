@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<domain>
+<class>
+/**
+* #table.desc#
+* Created by 廖天正 on #now#
+*
+* @author 廖天正
+* @since 0.0.1
+*/
+package #class.package#.model;
+
+import java.io.Serializable;
+#imports#
+
+/**
+ * #table.desc#
+ * 
+ * @author #author#
+ * @version 1.0
+ */
+data class #class.name#  (
+
+	<field>
+		/** #field.name#:#field.desc# */
+		@ApiModelProperty(value = "field.desc")
+		var #field.name#:#field.type#? = null;
+	</field>
+
+	) {
+	#fields#
+	#methods#
+}
+</class>
+<import>import #import#;</import>
+</domain>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class>
+
+package #class.package#.dao;
+
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import #class.package#.model.#class.name#;
+
+
+/**
+* #table.desc# Mapper服务
+* Created by 廖天正 on #now#.
+*
+* @author 廖天正
+* @since 0.0.1
+*/
+@Mapper
+interface #class.name#DAO{
+
+	fun selectById(@Param("id") id: #param.id_type#) : #class.name#
+
+	fun selectByIds(@Param("ids") ids : List<#param.id_type#> ) : List<#class.name#>
+
+  fun list(criteria :Map<String, Any> ) : List<#class.name#>
+
+  fun listAll() :List<#class.name#>
+
+  fun pagingRow( criteria :Map<String, Any>,  offset: Int,  limit:Int) : List<#class.name#>
+
+  fun pagingCount(criteria :Map<String, Any> ) : Int
+
+  fun insert(bean :#class.name# ) : Int
+
+  fun batchInsert(beanList :List<#class.name#> ) :Int
+
+  fun update(bean :#class.name# ) :Int
+
+  fun delete(@Param("id")id :#param.id_type# ):Int
+
+  fun deletes(@Param("ids")ids :List<#param.id_type#> ):Int
+}
+</class>
